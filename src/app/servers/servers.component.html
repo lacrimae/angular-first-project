@@ -2,8 +2,9 @@
 <input
   type="text"
   class="form-control"
-  (input)="onUpdateServerName($event)">
-<p>{{ name }}</p>
+  [(ngModel)]="name">
+<!--  (input)="onUpdateServerName($event)"-->
+<!--<p>{{ name }}</p>-->
 
 <!--property binding + event binding-->
 <button class="btn btn-primary"
@@ -11,9 +12,13 @@
         (click)="onCreateServer()">Add Server
 </button>
 <!--property binding-->
-<p [innerText]="allowNewServer"></p>
+<!--<p [innerText]="allowNewServer"></p>-->
 <!--vs string interpolation-->
 <!--<p>{{ allowNewServer }}</p>-->
-<p>{{ creationStatus }}</p>
+<!--<p>{{ creationStatus }}</p>-->
+<p *ngIf="isCreated; else noServer">Server has been created with name {{ name }}.</p>
+<ng-template #noServer>
+  <p>No server has been created!</p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
