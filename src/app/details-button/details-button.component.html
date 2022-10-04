@@ -1,0 +1,12 @@
+<button class="btn-dark"
+        (click)="onClick()">Display details
+</button>
+<br>
+<br>
+<p *ngIf="canShow"
+   class="secret">Secret password is 'Tuna'</p>
+<h5>The button has been clicked on:</h5>
+<div *ngFor="let time of timestamps"
+     [ngClass]="{'old-timestamp': timestamps.indexOf(time) >= AMOUNT_OF_CLICKS}">
+  <p>{{time}}</p>
+</div>

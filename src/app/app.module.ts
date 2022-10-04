@@ -9,6 +9,7 @@ import { ButtonComponent } from './button/button.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { UsernameComponent } from './username/username.component';
+import { DetailsButtonComponent } from './details-button/details-button.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UsernameComponent } from './username/username.component';
     ButtonComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    UsernameComponent
+    UsernameComponent,
+    DetailsButtonComponent
   ],
     imports: [
         BrowserModule,
